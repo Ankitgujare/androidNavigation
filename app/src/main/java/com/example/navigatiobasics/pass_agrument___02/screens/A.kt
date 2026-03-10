@@ -1,0 +1,37 @@
+package com.example.navigatiobasics.pass_agrument___02.screens
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
+import com.example.navigatiobasics.pass_agrument___02.routes.Routes
+
+@Composable
+fun A(navController: NavController){
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        Alignment.CenterHorizontally
+    ) {
+
+        Text("Sending Arguments")
+        Button(
+            onClick = {
+                //todo
+                navController.navigate("screenB/rahul")
+            }
+        ) {
+            Text("Next")
+        }
+
+
+
+    }
+}
