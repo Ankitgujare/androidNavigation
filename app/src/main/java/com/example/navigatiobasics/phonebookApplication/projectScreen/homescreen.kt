@@ -1,6 +1,6 @@
-package com.example.navigatiobasics.pass_agrument___02.screens
+package com.example.navigatiobasics.phonebookApplication.projectScreen
 
-
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,33 +9,30 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
-import com.example.navigatiobasics.pass_agrument___02.routes.Routes
+import androidx.compose.ui.tooling.preview.Preview
+
+@Composable
+fun homescreen(){
+    Column(
+        modifier= Modifier
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        Text("Homescreen")
+        Button(
+            onClick = {
+                Log.d("clicked Next","next Button clicked")
+            }
+        ) { }
+    }
+}
+
 
 
 @Composable
-fun B(navController: NavController,name:String?,age:Int?){
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        Alignment.CenterHorizontally
-    ) {
-
-        Text("Recieving an Argument")
-        Text("Name: $name")
-        Text("Age :$age")
-        Button(
-            onClick = {
-                //todo
-                navController.navigate(Routes.screenA)
-            }
-        ) {
-            Text("goBack")
-        }
-
-
-
-    }
+@Preview(showSystemUi = true)
+fun homepreview(){
+    homescreen()
 }

@@ -30,13 +30,19 @@ fun AppNav(){
             arguments = listOf(
                 navArgument("name") {
                     type = NavType.StringType
+                    defaultValue="Unknown"
+                },
+                navArgument("Age") {
+                    type = NavType.IntType
+                    defaultValue=19
                 }
             )
         ) { backStackEntry ->
 
             val name = backStackEntry.arguments?.getString("name")
+            val Age=backStackEntry.arguments?.getInt("Age")
 
-            B(navcontroler, name)
+            B(navcontroler, name,Age)
         }
 
 

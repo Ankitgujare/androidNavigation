@@ -25,7 +25,7 @@ fun A(navController: NavController){
         Button(
             onClick = {
                 //todo
-                navController.navigate("screenB/rahul")
+                    navController.navigate("screenB")
             }
         ) {
             Text("Next")
